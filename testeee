@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<title>Simulador da Lotofácil - Montar Jogo e Testar Números | MazuSoft</title>
+<meta charset="utf-8">
+<meta property="og:site_name" content="MazuSoft"/>
+<meta property="og:title" content="Simulador da Lotofácil - Montar Jogo e Testar Números | MazuSoft"/>
+<meta property="og:description" content="Simulador de números da Lotofácil para conferência dos resultados de todos os concursos, concursos anteriores, ferramenta para montar e testar jogos grátis.">
+<meta property="og:url" content="https://www.mazusoft.br/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://www.mazusoft.com.br/lotofacil/images/lotofacil.png"/>
+<meta property="og:image:type" content="image/png">
+<meta name="description" content="Simulador de números da Lotofácil para conferência dos resultados de todos os concursos, concursos anteriores, ferramenta para montar e testar jogos grátis.">
+<meta name="keywords" content="Lotofácil, loto, fácil, lotinha, simulador, números, jogos, apostas, palpite, planilha, conferência, resultado, conferidor, ferramenta, sorteio, prêmio, dezenas, concurso, anterior, acertos, 14, pontos, inteligente, erre 5, errar 5, erre 4, erre 3, robo, lotofácil da independência, sorte, grátis">
+<meta name="robots" content="index,follow">
+<meta name="distribution" content="global">
+<meta name="googlebot" content="all, index, follow">
+<meta name="google-site-verification" content="LdzfXpVZIgaxRrHpuOkA9NYzQcnJHqHCegHapQxbb4k">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.7, maximum-scale=2">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="Lotofácil MazuSoft"/>
+<meta name="msapplication-TileColor" content="#9F3393" />
+<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="images/favicon/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="images/favicon/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="images/favicon/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png" />
+ 
+<link href="../app/public/js/jquery-ui-1.12.1.custom/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="../app/public/css/loto-min.css?v=0.2726" rel="stylesheet" type="text/css" media="all"/>
+<link href="../app/public/css/vtip.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<div class="menuCt">
+<div class="menuTopo1">
+	<div class="menuTopo2">
+	<div class="logo"><a href="index.php"><img src="images/logo-lotofacil.png" width="138" height="29" alt="LOTOFÁCIL"/></a></div>	
+	<div class="menuTopo3">
+	<a target="_parent" href="../lotofacil/login.php?url=http%3A%2F%2Fwww.mazusoft.com.br%2Flotofacil%2Fconfere.php%3Fmeujogo%3D1%2C2%2C7%2C8%2C9%2C10%2C12%2C13%2C14%2C16%2C17%2C18%2C19%2C20%2C22" id="btn-login" ><img src="../app/public/img/ico-key.png" width="17" height="17" alt="Login"/>Login</a>
+    </div>
+	</div>
+</div> 
+<div id="MainMenuHeight">
+	<div id="MainMenuCt" data-spy="affix" data-offset-top="45">
+	<div id="MainMenu"> 
+	<nav class="menu">
+	<span class="menu-anchor"></span>
+	<a class="menu-resp" href="#">Menu</a>
+		<ul>
+		<li><a href="resultado.php">Resultados dos Sorteios</a></li>
+		<li><a href="gerador-lotofacil.php">Gerador de N&uacute;meros</a></li>
+		<li><a href="confere.php">Montar Jogo e Testar</a></li>
+		<li><a href="tabelas.php">Tabelas</a></li>
+		<li><a href="posts.php" id="dicas">Dicas</a></li>
+		<li><a href="ferramentas.php">Ferramentas</a></li>
+		<li><a href="loterias.php" id="btn-lot">Loterias</a></li>
+		<li><a href="contato.php">Contato</a></li>
+		</ul>
+	</nav>
+	</div>
+	</div>
+	</div>
+</div>
+<div id="Main">
+<form method="post" name="loto">
+<input type="hidden" name="cmd"/>
+<input type="hidden" value="1,2,7,8,9,10,12,13,14,16,17,18,19,20,22" name="meujogo" id="meujogo"/>
+<h1 style="padding-left:5px;">Montar Jogo e Testar</h1>
+<!-- C1 -->
+<div id="conf-c-1">
+	<div class="lotoCt">
+		<div class="lotoDz lotoLF lotoBg">01</div>
+		<div class="lotoDz lotoLF lotoBg">02</div>
+		<div class="lotoDz lotoLF">03</div>
+		<div class="lotoDz lotoLF">04</div>
+		<div class="lotoDz lotoLF">05</div>
+		<div class="lotoDz lotoLF clear">06</div>
+		<div class="lotoDz lotoLF lotoBg">07</div>
+		<div class="lotoDz lotoLF lotoBg">08</div>
+		<div class="lotoDz lotoLF lotoBg">09</div>
+		<div class="lotoDz lotoLF lotoBg">10</div>
+		<div class="lotoDz lotoLF clear">11</div>
+		<div class="lotoDz lotoLF lotoBg">12</div>
+		<div class="lotoDz lotoLF lotoBg">13</div>
+		<div class="lotoDz lotoLF lotoBg">14</div>
+		<div class="lotoDz lotoLF">15</div>
+		<div class="lotoDz lotoLF lotoBg clear">16</div>
+		<div class="lotoDz lotoLF lotoBg">17</div>
+		<div class="lotoDz lotoLF lotoBg">18</div>
+		<div class="lotoDz lotoLF lotoBg">19</div>
+		<div class="lotoDz lotoLF lotoBg">20</div>
+		<div class="lotoDz lotoLF clear">21</div>
+		<div class="lotoDz lotoLF lotoBg">22</div>
+		<div class="lotoDz lotoLF">23</div>
+		<div class="lotoDz lotoLF">24</div>
+		<div class="lotoDz lotoLF">25</div>
+		<div class="lotoTx clear" id="lotoTx">Par:9 Impar:6 | <b>Soma:188</b></div>
+	</div>
+<br class="clear"/>
+<div id="aviso" style="min-height:15px; width:250px;"></div>
+
+<div>
+<label for="concurso"><b>Concurso:</b></label> 
+<select id="concurso" name="concurso" disabled>
+	<option value="0">Todos</option>
+</select>
+<input type="button" onclick="post('ok')" class="btn" style="width:105px;" value="CONFERIR"/> <input type="button" onclick="clean()" class="btn" style="width:62px;" value="LIMPAR"/>
+
+<input type="button" class="btn" style="width:250px;margin-top:20px;" value="SALVAR PARA O CONCURSO 2707" onClick="post('save')"/>
+
+
+</div>
+</div>
+<!-- C2 -->
+<div id="conf-c-2">
+	<div id="conf-r-1">Resultados com Pontuação: <span id="act1">0</span></div>
+	<div id="conf-r-2">
+    </div>
+</div>
+<!-- C3 -->
+<div id="conf-c-3">
+	<div id="acz">
+    11 Acertos: 0<br/>
+    12 Acertos: 0<br/>
+    13 Acertos: 0<br/>
+    14 Acertos: 0<br/>
+    15 Acertos: 0<br/>
+	</div>
+    <div style="padding-top:10px;">Total de Acertos: <b><span id="act2">0</span></b></div>
+	<div style="padding-top:12px;" id="acp"></div>
+</div>
+<!-- C4 -->
+<div id="conf-c-4">
+  <label for="btso"><input type="radio" name="order" value="sorteio" onchange="this.form.submit()" id="btso" checked>Ordem de Sorteio</label>
+  <label for="btac"><input type="radio" name="order" value="acertos" onchange="this.form.submit()" id="btac" >Ordem de Acertos</label>
+</div>
+<div style="clear: both;"></div>
+
+<h1>Resultados da Lotofácil</h1>
+<ul>
+<li class="icon-lf"><a target="_blank" href="resultado.php?concurso=2706">Último Resultado da Lotofácil 2706</a></li>
+<li class="icon-lf"><a target="_blank" href="resultados.php">Todos os Resultados da Lotofácil</a></li>
+</ul>
+
+<h1>Outras Loterias</h1>
+<ul>
+<li class="icon-ms"><a target="_blank" href="../mega/confere.php">Simulador MegaSena</a></li>
+<li class="icon-lm"><a target="_blank" href="../lotomania/confere.php">Simulador Lotomania</a></li>
+<li class="icon-qu"><a target="_blank" href="../quina/confere.php">Simulador Quina</a></li>
+<li class="icon-ds"><a target="_blank" href="../dupla-sena/confere.php">Simulador Dupla Sena</a></li>
+<li class="icon-di"><a target="_blank" href="../dia-de-sorte/confere.php">Simulador Dia de Sorte</a></li>
+<li class="icon-tm"><a target="_blank" href="../lotofacil/confere-timemania.php">Simulador Timemania</a></li>
+<li class="icon-ss"><a target="_blank" href="../lotofacil/confere-super-sete.php">Simulador Super Sete</a></li>
+<li class="icon-mm"><a target="_blank" href="../mais-milionaria/confere.php">Simulador +Milionária</a></li>
+</ul>
+
+<div style="display:none;text-align:left;" id="dialog-confirm" title="Limpar Jogo">
+ <div style="margin:10px;" id="dialog-txt">Limpar este jogo?</div>
+</div>
+
+</form>
+</div>
+<div id="toTop" style="display:none;"><img width="40" height="40" alt="Topo" src="../app/public/img/top-arrow.png"></div>
+<div id="toDw" style="display:none;"><img width="40" height="40" alt="Baixo" src="../app/public/img/dw-arrow.png"></div>
+<div id="footer"><a class="participeLink" href="../lotofacil/participe.php">
+<div>Este Projeto é mantido com recursos próprios, <span>sem propagandas, banners ou anúncios.</span></div>
+<div>Você pode ter acesso a tudo e colaborar <span>para que este Projeto continue!</span></div>
+<div>Seja um Usuário <span class="premium">Premium!</span></div>
+</a>
+</div>
+<div id="social">
+<a target="_blank" href="https://www.instagram.com/mazusoft/"><img src="../app/public/img/social_instagram-2.png" alt="Instagram" width="25" height="25"></a><a target="_blank" href="https://www.facebook.com/mazusoft/"><img src="../app/public/img/social_facebook-2.png" alt="Facebook" width="25" height="25"></a><a target="_blank" href="https://twitter.com/MazuSoft1/"><img src="../app/public/img/social_twitter-2.png" alt="Twitter" width="25" height="25"></a><a target="_blank" href="https://www.youtube.com/mazusoft/"><img src="../app/public/img/social_youtube-2.png" alt="YouTube" width="25" height="25"></a>
+</div>
+
+<script src="../app/public/js/jquery-2.1.4.min.js"></script>
+<script src="../app/public/js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="../app/public/js/bootstrap-alert.js"></script>
+<script src="../app/public/js/util.js?v=1.34"></script>
+<script src="../app/public/js/affix.js"></script>
+<script src="../app/public/js/vtip.js"></script>
+<script src="../app/public/js/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="../app/public/js/jquery.modal.min.css"/>
+<script>
+var dropdown = $('#concurso');
+for(c=2706;c>0;c--){ dropdown.append($('<option></option>').attr('value', c).text(c)); }
+dropdown.val('0');
+dropdown.prop( "disabled",false);
+</script>
+<script>
+conf();
+
+function conf(){
+
+m = document.getElementById("meujogo").value;
+o = document.querySelector('input[name="order"]:checked').value;
+c = document.getElementById("concurso").value;
+$("#conf-r-2").html("<div class='conf-load'>Carregando...</div>");
+	$.getJSON('confere.php?meujogo='+m+'&concurso='+c+'&order='+o+'&cmd=load', function (data) {
+		$("#conf-r-2").html("");
+		$("#acz").html("");
+		$.each(data['li'], function (key,entry) {
+		c = ''; p = '';
+		if(entry.a >= 11) c =  ' resBg';
+		if(entry.a >= 15) c =  ' resG';
+		if(entry.p != null) p =  ' &nbsp ' + entry.p;
+		$("#conf-r-2").append('<div class="res'+c+'"><b>Concurso:</b><a href="resultado.php?concurso=' + entry.c + '" target="_blank">' + entry.c + '</a> <b>Total Acertos:</b> ' + entry.a + p + '</div>'); })
+		$.each(data['ac'], function (key,entry) {
+			if(key >= 11)
+			$("#acz").append(key+' Acertos: '+entry+'<br>');
+		})
+		$("#act1").html(data['at']);
+		$("#act2").html(data['at']);
+		$("#acp").html(data['ap']);
+}); }
+</script>
+<script>
+var min = 15;
+var max = 20;
+function post(cmd){	
+	f = document.forms['loto'];
+	f.cmd.value = cmd;
+		var dez = getDez();
+	if(dez.length < 1) {
+		$("#aviso").html("Selecione 15 dezenas");
+		$("#aviso").addClass("alert alert-danger");
+		return false;
+	}
+	dz = dez.join(',');
+	$("#meujogo").val(dz);
+	url = "?meujogo="+dz;
+	window.history.replaceState("object", "MazuSoft", url);
+		if(cmd == 'save') {
+		$("#aviso").html("Efetue seu Login para Salvar");
+		$("#aviso").addClass("alert alert-danger");
+		return false;
+	}
+		f.submit();
+}
+</script>
+
+<a id="emailBox" style="display:none" href="email-box.php" rel="modal:open">e</a>
+<style>.modal{max-width:440px;}</style>
+<script> element = document.getElementById("emailBox");element.click(); </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20755120-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+    gtag('config', 'UA-20755120-1');
+</script>
+</body>
+</html>
